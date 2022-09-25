@@ -1,17 +1,17 @@
 import { render, screen, fireEvent } from "@testing-library/react";
 import Button, { ButtonProps, ButtonSize, ButtonType } from "./button";
-
+import "../../styles/index.scss";
 const defaultProps: ButtonProps = {
   onClick: jest.fn(),
 };
 const customProps: ButtonProps = {
   onClick: jest.fn(),
   className: "myClassName",
-  buttonType: ButtonType.Primary,
-  size: ButtonSize.Large,
+  buttonType: "primary",
+  size: "lg",
 };
 const linkProps: ButtonProps = {
-  buttonType: ButtonType.Link,
+  buttonType: "link",
   href: "http://www.sss.com",
 };
 
