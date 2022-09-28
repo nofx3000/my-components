@@ -1,4 +1,4 @@
-import React, { CSSProperties, useState, createContext } from "react";
+import React, { FC, CSSProperties, useState, createContext } from "react";
 import classNames from "classnames";
 import { MenuItemProps } from "./menuItem";
 
@@ -25,7 +25,7 @@ export const MenuContext = createContext<contextProps>({
   mode: "horizontal",
 });
 
-const Menu: React.FC<MenuProps> = (props) => {
+export const Menu: FC<MenuProps> = (props) => {
   const {
     defaultIndex,
     mode,
