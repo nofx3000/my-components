@@ -1,0 +1,28 @@
+{
+    "compilerOptions": {
+      //  outDir 编译后的文件存到到哪个目录下,默认是每一个ts文件的当前目录,,下面的配置就是把ts编译到dist目录下
+      "outDir": "dist",
+      // 指定使用模块: 'commonjs', 'amd', 'system', 'umd' or 'es2015'
+      "module": "esnext",
+      // 指定 ECMAScript 目标版本: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017', or 'ESNEXT'
+      "target": "es5",
+      /* 如果设为true，编译每个ts文件之后会生成一个js文件和一个声明文件,
+       declaration和allowJs不能同时设为true */
+      "declaration": true,
+      // 指定 jsx 代码的生成: 'preserve', 'react-native', or 'react'
+      "jsx": "react-jsx",
+      // 用于选择模块解析策略，有'node'和'classic'两种类型
+      "moduleResolution":"node",
+      // 通过为导入内容创建命名空间，实现CommonJS和ES模块之间的互操作性
+      "allowSyntheticDefaultImports": true,
+    },
+    "include": [
+      "src"
+    ],
+    "exclude": [
+      "src/**/*.test.tsx",
+      "src/**/*.stories.tsx",
+      "src/setupTests.ts",
+      "src/stories"
+    ]
+  }
