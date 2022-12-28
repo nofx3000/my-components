@@ -1,0 +1,43 @@
+.alert {
+  width: 100%;
+  position: fixed;
+  display: inline-block;
+  font-weight: $btn-font-weight;
+  line-height: $btn-line-height;
+  color: $body-color;
+  text-align: left;
+  vertical-align: middle;
+  border: $btn-border-width solid transparent;
+  box-shadow: $btn-box-shadow;
+  padding: $btn-padding-y $btn-padding-x;
+  p {
+    margin-bottom: 0;
+    font-weight: $font-weight-bold;
+  }
+  .alert-xmark {
+    position: absolute;
+    top: 5px;
+    right: 20px;
+    &:hover {
+      color: $btn-link-hover-color;
+      text-decoration: $link-hover-decoration;
+      cursor: pointer;
+    }
+  }
+}
+
+.alert-success {
+  @include alert-style($green, null, $white);
+}
+
+.alert-default {
+  @include alert-style($blue, $gray-400, $white);
+}
+
+.alert-danger {
+  @include alert-style($red, null, $white);
+}
+
+.alert-warning {
+  @include alert-style($yellow, $gray-400, $white);
+}

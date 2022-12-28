@@ -10,7 +10,7 @@ export default {
 } as ComponentMeta<typeof Alert>;
 
 const Template: ComponentStory<typeof Alert> = (args) => (
-  <Alert {...args}>123</Alert>
+  <Alert {...args}></Alert>
 );
 
 export const alert = Template.bind({});

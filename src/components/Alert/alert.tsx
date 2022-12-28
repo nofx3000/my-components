@@ -1,5 +1,6 @@
 import React, { FC } from "react";
 import classNames from "classnames";
+import Icon from "../Icon";
 
 export type AlertType = "success" | "default" | "warning" | "danger";
 export interface AlertProps {
@@ -19,10 +20,21 @@ export const Alert: FC<AlertProps> = (props) => {
     <div className={classes}>
       <p>{title}</p>
       <span>{description}</span>
+      {closable && (
+        <Icon
+          icon="xmark"
+          theme="light"
+          className="alert-xmark"
+          onClick={() => {
+            onClose && onClose();
+          }}
+        ></Icon>
+      )}
     </div>
   );
 };
 
 Alert.defaultProps = {
   type: "default",
+  closable: true,
 };
